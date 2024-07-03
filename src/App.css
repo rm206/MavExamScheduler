@@ -11,4 +11,6 @@ body {
 
   /* Ensuring full height of the viewport */
   height: 100vh;
+
+  font-family: 'Roboto', sans-serif;
 }

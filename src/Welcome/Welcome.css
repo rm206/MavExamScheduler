@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 50px 0;
+    text-align: center;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.fadeInUp-animation {
+    animation: 1.5s fadeInUp;
+
+}
+
+.fadeInUp-animation:hover {
+    color: #F58025;
+}
+
+.fadeInTitle {
+    color: #0064B1;
+    font-size: 3.5rem;
+    margin: 50px 0;
+    text-align: center;
+}
+
+cssCopy* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 50px 0;
+    text-align: center;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.fadeInUp-animation {
+    animation: 1.5s fadeInUp;
+}
+
+.fadeInUp-animation:hover {
+    color: #F58025;
+}
+
+.fadeInTitle {
+    color: #0064B1;
+    font-size: 3.5rem;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.info-box {
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.info-box h2 {
+    color: #0064B1;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    color: #333;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+a:visited {
+    color: blue;
+}
+
+.emoji {
+    display: inline;
+}
