@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import UTAImage from '../assets/UTA_Initials_white-orange-star-rgb.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faSearch, faCalendar, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
     return (
@@ -11,16 +13,28 @@ const NavBar = () => {
             </div>
             <ul className="navbar-links">
                 <li className="nav-link">
-                    <Link to="/">Home</Link>
+                    <Link to="/">
+                        <FontAwesomeIcon icon={faHome} className="icon-spacing" />
+                        Home
+                    </Link>
                 </li>
                 <li className="nav-link">
-                    <Link to="/search">Search</Link>
+                    <Link to="/search">
+                        <FontAwesomeIcon icon={faSearch} className="icon-spacing" />
+                        Search
+                    </Link>
                 </li>
                 <li className="nav-link">
-                    <Link to="/calendar">Calendar</Link>
+                    <Link to="/calendar">
+                        <FontAwesomeIcon icon={faCalendar} className="icon-spacing" />
+                        Calendar
+                    </Link>
                 </li>
                 <li className="nav-link">
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact">
+                        <FontAwesomeIcon icon={faEnvelope} className="icon-spacing" />
+                        Contact
+                    </Link>
                 </li>
             </ul>
         </nav>
