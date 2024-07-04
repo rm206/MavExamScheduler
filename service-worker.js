@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/MavExamScheduler/precache-manifest.c884a160f60ec6b2ee6c03395db6574d.js"
+  "/MavExamScheduler/precache-manifest.1ca58eaf90550ac3aeda3a1620f58c29.js"
 );
 
 self.addEventListener('message', (event) => {

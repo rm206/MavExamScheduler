@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/MavExamScheduler/static/css/main.eb7c3c02.chunk.css",
-    "main.js": "/MavExamScheduler/static/js/main.8c4757d6.chunk.js",
-    "main.js.map": "/MavExamScheduler/static/js/main.8c4757d6.chunk.js.map",
+    "main.js": "/MavExamScheduler/static/js/main.ad352db1.chunk.js",
+    "main.js.map": "/MavExamScheduler/static/js/main.ad352db1.chunk.js.map",
     "runtime-main.js": "/MavExamScheduler/static/js/runtime-main.2761964f.js",
     "runtime-main.js.map": "/MavExamScheduler/static/js/runtime-main.2761964f.js.map",
-    "static/js/2.a0140d31.chunk.js": "/MavExamScheduler/static/js/2.a0140d31.chunk.js",
-    "static/js/2.a0140d31.chunk.js.map": "/MavExamScheduler/static/js/2.a0140d31.chunk.js.map",
+    "static/js/2.075da6bf.chunk.js": "/MavExamScheduler/static/js/2.075da6bf.chunk.js",
+    "static/js/2.075da6bf.chunk.js.map": "/MavExamScheduler/static/js/2.075da6bf.chunk.js.map",
     "index.html": "/MavExamScheduler/index.html",
-    "precache-manifest.c884a160f60ec6b2ee6c03395db6574d.js": "/MavExamScheduler/precache-manifest.c884a160f60ec6b2ee6c03395db6574d.js",
+    "precache-manifest.1ca58eaf90550ac3aeda3a1620f58c29.js": "/MavExamScheduler/precache-manifest.1ca58eaf90550ac3aeda3a1620f58c29.js",
     "service-worker.js": "/MavExamScheduler/service-worker.js",
     "static/css/main.eb7c3c02.chunk.css.map": "/MavExamScheduler/static/css/main.eb7c3c02.chunk.css.map",
-    "static/js/2.a0140d31.chunk.js.LICENSE.txt": "/MavExamScheduler/static/js/2.a0140d31.chunk.js.LICENSE.txt",
+    "static/js/2.075da6bf.chunk.js.LICENSE.txt": "/MavExamScheduler/static/js/2.075da6bf.chunk.js.LICENSE.txt",
     "static/media/UTA_Initials_white-orange-star-rgb.png": "/MavExamScheduler/static/media/UTA_Initials_white-orange-star-rgb.b7a18770.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2761964f.js",
-    "static/js/2.a0140d31.chunk.js",
+    "static/js/2.075da6bf.chunk.js",
     "static/css/main.eb7c3c02.chunk.css",
-    "static/js/main.8c4757d6.chunk.js"
+    "static/js/main.ad352db1.chunk.js"
   ]
 }
