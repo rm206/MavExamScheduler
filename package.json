@@ -1,6 +1,7 @@
 {
   "name": "mav_exam_scheduler",
   "version": "0.1.0",
+  "homepage": "https://rm206.github.io/MavExamScheduler",
   "private": true,
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
@@ -16,6 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
