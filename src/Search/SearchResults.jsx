@@ -114,7 +114,7 @@ export default function SearchResults({ selectedSemester, selectedCourse, API_ur
                 </thead>
                 <tbody>
                     {searchResults.map((result, index) => {
-                        const courseInfo = getCourseInfo(selectedCourse);
+                        const courseInfo = selectedCourse ? getCourseInfo(selectedCourse) : getCourseInfo(result.course_id);
                         const examKey = `${result.date}_${result.start_time}_${courseInfo.course_subject}_${courseInfo.course_number}`;
                         const isAdded = !!addedExams[examKey];
                         return (
