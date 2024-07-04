@@ -5,6 +5,7 @@ export default function SearchResults({ selectedSemester, selectedCourse, API_ur
     const [searchResults, setSearchResults] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [addedExams, setAddedExams] = useState({});
     const api_url = API_url
 
     useEffect(() => {
@@ -52,6 +53,10 @@ export default function SearchResults({ selectedSemester, selectedCourse, API_ur
             } finally {
                 setLoading(false);
             }
+
+            // Load added exams from session storage
+            const storedAddedExams = JSON.parse(sessionStorage.getItem('MES_added_to_calendar') || '{}');
+            setAddedExams(storedAddedExams);
         };
 
         fetchSearchResults();
@@ -61,6 +66,20 @@ export default function SearchResults({ selectedSemester, selectedCourse, API_ur
         const storageKey = selectedSemester === 'all' ? 'MES_courses_all' : `MES_courses_${selectedSemester}`;
         const storedCourses = JSON.parse(sessionStorage.getItem(storageKey) || '[]');
         return storedCourses.find(course => course.id === courseId) || { course_subject: '', course_number: '' };
+    };
+
+    const toggleExamInCalendar = (exam) => {
+        const examKey = `${exam.date}_${exam.start_time}_${exam.course_subject}_${exam.course_number}`;
+        const updatedAddedExams = { ...addedExams };
+
+        if (updatedAddedExams[examKey]) {
+            delete updatedAddedExams[examKey];
+        } else {
+            updatedAddedExams[examKey] = exam;
+        }
+
+        setAddedExams(updatedAddedExams);
+        sessionStorage.setItem('MES_added_to_calendar', JSON.stringify(updatedAddedExams));
     };
 
     if (loading) return <div>Loading...</div>;
@@ -90,11 +109,14 @@ export default function SearchResults({ selectedSemester, selectedCourse, API_ur
                         <th>Building Name</th>
                         <th>Room No</th>
                         <th>Instructor Name</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     {searchResults.map((result, index) => {
                         const courseInfo = getCourseInfo(selectedCourse);
+                        const examKey = `${result.date}_${result.start_time}_${courseInfo.course_subject}_${courseInfo.course_number}`;
+                        const isAdded = !!addedExams[examKey];
                         return (
                             <tr key={index}>
                                 <td>{courseInfo.course_subject}</td>
@@ -107,6 +129,14 @@ export default function SearchResults({ selectedSemester, selectedCourse, API_ur
                                 <td>{result.building_name}</td>
                                 <td>{result.room_no}</td>
                                 <td>{result.instructor_name}</td>
+                                <td>
+                                    <button
+                                        onClick={() => toggleExamInCalendar({ ...result, ...courseInfo })}
+                                        className={isAdded ? 'added-button' : 'add-button'}
+                                    >
+                                        {isAdded ? 'Added' : 'Add'}
+                                    </button>
+                                </td>
                             </tr>
                         );
                     })}
