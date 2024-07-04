@@ -69,7 +69,7 @@ export default function SearchResults({ selectedSemester, selectedCourse, API_ur
     };
 
     const toggleExamInCalendar = (exam) => {
-        const examKey = `${exam.date}_${exam.start_time}_${exam.course_subject}_${exam.course_number}`;
+        const examKey = `${exam.date}_${exam.start_time}_${exam.course_subject}_${exam.course_number}_${exam.section}`;
         const updatedAddedExams = { ...addedExams };
 
         if (updatedAddedExams[examKey]) {
@@ -115,7 +115,7 @@ export default function SearchResults({ selectedSemester, selectedCourse, API_ur
                 <tbody>
                     {searchResults.map((result, index) => {
                         const courseInfo = selectedCourse ? getCourseInfo(selectedCourse) : getCourseInfo(result.course_id);
-                        const examKey = `${result.date}_${result.start_time}_${courseInfo.course_subject}_${courseInfo.course_number}`;
+                        const examKey = `${result.date}_${result.start_time}_${courseInfo.course_subject}_${courseInfo.course_number}_${result.section}`;
                         const isAdded = !!addedExams[examKey];
                         return (
                             <tr key={index}>

@@ -4,6 +4,7 @@ import SemesterDropdown from './SemesterDropDown';
 import CourseDropdown from './CourseDropDown';
 import SearchResults from './SearchResults';
 import './Search.css'
+import { Link } from 'react-router-dom';
 
 export default function Search() {
 
@@ -116,14 +117,30 @@ export default function Search() {
                 )}
             </div>
             {showSearchResults && (
-                <div className="search-results">
-                    <SearchResults
-                        selectedSemester={selectedSemester}
-                        selectedCourse={selectedCourse}
-                        API_url={api_url}
-                    />
-                </div>
+                <>
+                    <div className="search-results">
+                        <SearchResults
+                            selectedSemester={selectedSemester}
+                            selectedCourse={selectedCourse}
+                            API_url={api_url}
+                        />
+                    </div>
+                    <div className="calendar-button">
+                        <Link to="/calendar">
+                            <button>Go to Calendar</button>
+                        </Link>
+                    </div>
+                </>
             )}
+            <div className="tips-container">
+                <hr className="tips-divider" />
+                <div className="tips-content">
+                    <h3>Tips</h3>
+                    <p>- This is where you can search for courses and add them to your schedule</p>
+                    <p>- Once addded, go to Calendar and add them to your personal calendar</p>
+                    <p>- Search through all courses in a semester or choose a course in a semester to see all available exam scheduler for the course</p>
+                </div>
+            </div>
         </>
     );
 };
