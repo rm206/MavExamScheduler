@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "34729eba0206ac7a761eb4aae992a1e2",
+    "revision": "956c0fd2f181f40823e5d42ccdd926a4",
     "url": "/MavExamScheduler/index.html"
   },
   {
-    "revision": "3a6cee4cc3f32ee6a234",
+    "revision": "712cfc426e006772a417",
     "url": "/MavExamScheduler/static/css/main.eb7c3c02.chunk.css"
   },
   {
-    "revision": "fd24fe5e888ded00a0a1",
-    "url": "/MavExamScheduler/static/js/2.075da6bf.chunk.js"
+    "revision": "a0aea1a7f35b9b96eeee",
+    "url": "/MavExamScheduler/static/js/2.a0140d31.chunk.js"
   },
   {
     "revision": "2f58089c61d46f50cf6fed08f3e9f0eb",
-    "url": "/MavExamScheduler/static/js/2.075da6bf.chunk.js.LICENSE.txt"
+    "url": "/MavExamScheduler/static/js/2.a0140d31.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3a6cee4cc3f32ee6a234",
-    "url": "/MavExamScheduler/static/js/main.ad352db1.chunk.js"
+    "revision": "712cfc426e006772a417",
+    "url": "/MavExamScheduler/static/js/main.a2c18daf.chunk.js"
   },
   {
     "revision": "245bd89384995a28c863",
