@@ -15,6 +15,7 @@ export default function Welcome() {
                 <div className="info-box fadeInUp-animation">
                     <h2>Disclaimer</h2>
                     <p>While I, the author and builder, have made every effort to ensure the accuracy and reliability of the information provided, I cannot guarantee its completeness or correctness. Users are strongly advised to double-check with their instructor or refer to the master plan to ensure they have the most current and accurate information. I am not responsible for any errors or omissions, or for any outcomes related to the use of this information. </p>
+                    <p>This project is not officially associated with The University of Texas at Arlington (UTA) and has been created through personal effort. All UTA symbols, logos, and trademarks are the property of The University of Texas at Arlington and are used here for informational purposes only.</p>
                 </div>
             </div>
         </>
