@@ -16,6 +16,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Welcome />} />
+        <Route path="/MavExamScheduler" element={<Welcome />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/search" element={<Search />} />
