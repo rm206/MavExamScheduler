@@ -18,7 +18,7 @@
 }
 
 /* Dropdown Styles */
-.semester-dropdown {
+.dropdown {
     width: 100%;
     padding: 12px;
     font-size: 1.1rem;
@@ -30,8 +30,8 @@
     transition: all 0.3s ease;
 }
 
-.semester-dropdown:hover,
-.semester-dropdown:focus {
+.dropdown:hover,
+.dropdown:focus {
     border-color: #F58025;
     outline: none;
 }
@@ -58,7 +58,7 @@
 }
 
 .semester-selection,
-.semester-dropdown,
+.dropdown,
 .selected-semester {
     animation: fadeIn 0.5s ease-out;
 }
@@ -132,4 +132,36 @@
 
 .search-button {
     animation: fadeIn 0.5s ease-out;
+}
+
+.search-results-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.search-results-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.search-results-table th,
+.search-results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.search-results-table th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+}
+
+.search-results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
 }

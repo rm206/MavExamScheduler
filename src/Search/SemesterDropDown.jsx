@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Search.css';
 
 const SemesterDropDown = ({ semesters, selectedSemester, onSemesterChange }) => {
@@ -12,7 +12,7 @@ const SemesterDropDown = ({ semesters, selectedSemester, onSemesterChange }) => 
 
     return (
         <select
-            className="semester-dropdown"
+            className="dropdown"
             value={selectedSemester}
             onChange={(e) => onSemesterChange(e.target.value)}
         >
@@ -22,6 +22,7 @@ const SemesterDropDown = ({ semesters, selectedSemester, onSemesterChange }) => 
                     {`${semester.semester_name} ${semester.semester_year}`}
                 </option>
             ))}
+            <option value="all">All semesters</option>
         </select>
     );
 };

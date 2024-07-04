@@ -48,18 +48,20 @@ export default function Search() {
     useEffect(() => {
         const fetchCourses = async () => {
             if (selectedSemester) {
-                const storedCourses = sessionStorage.getItem(`MES_courses_${selectedSemester}`);
+                const storageKey = selectedSemester === 'all' ? 'MES_courses_all' : `MES_courses_${selectedSemester}`;
+                const storedCourses = sessionStorage.getItem(storageKey);
                 if (storedCourses) {
                     setCourses(JSON.parse(storedCourses));
                     console.log("Courses fetched from session storage");
                 }
                 else {
                     try {
-                        const response = await fetch(`${api_url}courses/${selectedSemester}`);
+                        const endpoint = selectedSemester === 'all' ? 'courses/all' : `courses/${selectedSemester}`;
+                        const response = await fetch(`${api_url}${endpoint}`);
                         if (response.ok) {
                             const data = await response.json();
                             setCourses(data);
-                            sessionStorage.setItem(`MES_courses_${selectedSemester}`, JSON.stringify(data));
+                            sessionStorage.setItem(storageKey, JSON.stringify(data));
                         }
                         else {
                             console.error("Failed to fetch courses:", response.statusText);
@@ -86,8 +88,7 @@ export default function Search() {
         setSelectedCourse(courseId);
     };
 
-    const handleSearch = () => {
-        // Logic for search button click
+    const handleSearchResultVisibility = () => {
         setShowSearchResults(true);
     };
 
@@ -103,14 +104,14 @@ export default function Search() {
                 />
                 {selectedSemester && (
                     <>
-                        <p className="selected-semester">Selected Semester ID: {selectedSemester}</p>
                         <h2>Select a Course</h2>
                         <CourseDropdown
                             courses={courses}
                             selectedCourse={selectedCourse}
                             onCourseChange={handleCourseChange}
+                            selectedSemester={selectedSemester}
                         />
-                        <button onClick={handleSearch} className="search-button">Search</button>
+                        <button onClick={handleSearchResultVisibility} className="search-button">Search</button>
                     </>
                 )}
             </div>
@@ -119,6 +120,7 @@ export default function Search() {
                     <SearchResults
                         selectedSemester={selectedSemester}
                         selectedCourse={selectedCourse}
+                        API_url={api_url}
                     />
                 </div>
             )}
