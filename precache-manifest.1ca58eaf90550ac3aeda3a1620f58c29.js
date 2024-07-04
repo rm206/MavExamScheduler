@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aba634934579a42efcf659d55e705fb5",
+    "revision": "34729eba0206ac7a761eb4aae992a1e2",
     "url": "/MavExamScheduler/index.html"
   },
   {
-    "revision": "113468d3a082d7e9e068",
+    "revision": "3a6cee4cc3f32ee6a234",
     "url": "/MavExamScheduler/static/css/main.eb7c3c02.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MavExamScheduler/static/js/2.075da6bf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "113468d3a082d7e9e068",
-    "url": "/MavExamScheduler/static/js/main.2c12bc02.chunk.js"
+    "revision": "3a6cee4cc3f32ee6a234",
+    "url": "/MavExamScheduler/static/js/main.ad352db1.chunk.js"
   },
   {
     "revision": "245bd89384995a28c863",
