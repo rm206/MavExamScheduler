@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/MavExamScheduler/static/css/main.eb7c3c02.chunk.css",
-    "main.js": "/MavExamScheduler/static/js/main.ad352db1.chunk.js",
-    "main.js.map": "/MavExamScheduler/static/js/main.ad352db1.chunk.js.map",
+    "main.js": "/MavExamScheduler/static/js/main.2c12bc02.chunk.js",
+    "main.js.map": "/MavExamScheduler/static/js/main.2c12bc02.chunk.js.map",
     "runtime-main.js": "/MavExamScheduler/static/js/runtime-main.2761964f.js",
     "runtime-main.js.map": "/MavExamScheduler/static/js/runtime-main.2761964f.js.map",
     "static/js/2.075da6bf.chunk.js": "/MavExamScheduler/static/js/2.075da6bf.chunk.js",
     "static/js/2.075da6bf.chunk.js.map": "/MavExamScheduler/static/js/2.075da6bf.chunk.js.map",
     "index.html": "/MavExamScheduler/index.html",
-    "precache-manifest.1ca58eaf90550ac3aeda3a1620f58c29.js": "/MavExamScheduler/precache-manifest.1ca58eaf90550ac3aeda3a1620f58c29.js",
+    "precache-manifest.00d7d9aa15caa3ba30fd4c2cf1982b60.js": "/MavExamScheduler/precache-manifest.00d7d9aa15caa3ba30fd4c2cf1982b60.js",
     "service-worker.js": "/MavExamScheduler/service-worker.js",
     "static/css/main.eb7c3c02.chunk.css.map": "/MavExamScheduler/static/css/main.eb7c3c02.chunk.css.map",
     "static/js/2.075da6bf.chunk.js.LICENSE.txt": "/MavExamScheduler/static/js/2.075da6bf.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.2761964f.js",
     "static/js/2.075da6bf.chunk.js",
     "static/css/main.eb7c3c02.chunk.css",
-    "static/js/main.ad352db1.chunk.js"
+    "static/js/main.2c12bc02.chunk.js"
   ]
 }
