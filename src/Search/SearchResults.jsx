@@ -55,12 +55,30 @@ export default function SearchResults({ selectedSemester, selectedCourse, API_ur
             }
 
             // Load added exams from session storage
-            const storedAddedExams = JSON.parse(sessionStorage.getItem('MES_added_to_calendar') || '{}');
-            setAddedExams(storedAddedExams);
+            // const storedAddedExams = JSON.parse(sessionStorage.getItem('MES_added_to_calendar') || '{}');
+            // setAddedExams(storedAddedExams);
         };
 
         fetchSearchResults();
     }, [selectedSemester, selectedCourse]);
+
+    useEffect(() => {
+        const loadAddedExams = () => {
+            const storedAddedExams = JSON.parse(sessionStorage.getItem('MES_added_to_calendar') || '{}');
+            setAddedExams(storedAddedExams);
+        };
+
+        loadAddedExams();
+
+        const handleStorageChange = (e) => {
+            if (e.key === 'MES_added_to_calendar') {
+                loadAddedExams();
+            }
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+        return () => window.removeEventListener('storage', handleStorageChange);
+    }, []);
 
     const getCourseInfo = (courseId) => {
         const storageKey = selectedSemester === 'all' ? 'MES_courses_all' : `MES_courses_${selectedSemester}`;
