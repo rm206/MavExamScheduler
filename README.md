@@ -8,6 +8,10 @@ This tool uses ReactJS for the frontend hosted on GitHub Pages, Spring Boot for 
 
 Try this tool out [here](https://rm206.github.io/MavExamScheduler/)!
 
+![Screenshot of the home page](ss1.png)
+![Screenshot of the search page](ss2.png)
+![Screenshot of the calendar page](ss3.png)
+
 # Other Relevant Information
 
 Backend code can be found [here](https://github.com/rm206/MavExamSchedulerBackend)
