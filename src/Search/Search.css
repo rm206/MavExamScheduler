@@ -1,0 +1,135 @@
+/* Semester Selection Container */
+.semester-selection {
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    transition: transform 0.3s ease;
+}
+
+.semester-selection h2 {
+    color: #0064B1;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Dropdown Styles */
+.semester-dropdown {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 2px solid #0064B1;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.semester-dropdown:hover,
+.semester-dropdown:focus {
+    border-color: #F58025;
+    outline: none;
+}
+
+/* Selected Semester Display */
+.selected-semester {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #0064B1;
+    text-align: center;
+}
+
+/* Animation for new elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.semester-selection,
+.semester-dropdown,
+.selected-semester {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.search-button {
+    background-color: #E06C1F;
+    /* Darker shade of #F58025 */
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow:
+        inset 0 2px 4px rgba(255, 255, 255, 0.2),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 20px auto 0;
+    width: 100%;
+    max-width: 200px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.search-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
+    pointer-events: none;
+}
+
+.search-button:hover,
+.search-button:focus {
+    background-color: #D0651D;
+    /* Even darker on hover */
+    transform: translateY(-2px);
+    box-shadow:
+        inset 0 2px 4px rgba(255, 255, 255, 0.2),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+        0 4px 6px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.search-button:active {
+    transform: translateY(1px);
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.2),
+        inset 0 -2px 4px rgba(255, 255, 255, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-button {
+    animation: fadeIn 0.5s ease-out;
+}

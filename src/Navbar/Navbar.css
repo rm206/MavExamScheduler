@@ -49,6 +49,10 @@
     font-size: 1.8rem;
 }
 
+.navbar-links .nav-link a:hover {
+    color: #F58025;
+}
+
 .icon-spacing {
     margin-right: 8px;
 }

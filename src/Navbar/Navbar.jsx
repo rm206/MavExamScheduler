@@ -9,7 +9,9 @@ const NavBar = () => {
     return (
         <nav className='navbar'>
             <div className="navbar-left">
-                <img src={UTAImage} alt="UTA Logo" className="uta-logo" />
+                <Link to="/">
+                    <img src={UTAImage} alt="UTA Logo" className="uta-logo" />
+                </Link>
             </div>
             <ul className="navbar-links">
                 <li className="nav-link">

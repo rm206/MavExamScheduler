@@ -4,7 +4,7 @@ import './Welcome.css'
 export default function Welcome() {
     return (
         <>
-            <div class="fadeInUp-animation fadeInTitle">Welcome To Mav Exam Scheduler!</div>
+            <div className="fadeInUp-animation fadeInTitle">Welcome To Mav Exam Scheduler!</div>
             <div className="info-container">
                 <div className="info-box fadeInUp-animation">
                     <h2>About This Website</h2>
